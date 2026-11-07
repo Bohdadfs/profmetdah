@@ -1,0 +1,57 @@
+<div class="callback-overlay" id="callbackOverlay">
+    <div class="callback-modal">
+
+        <button class="callback-close" id="callbackClose" aria-label="Закрити">
+            ×
+        </button>
+
+        <div class="callback-content">
+
+            <p class="callback-status">
+                Залиште заявку, і ми зателефонуємо Вам.
+            </p>
+
+            <h2>Хочете, передзвонимо Вам точно в:</h2>
+
+            <form id="callbackForm">
+
+                <div class="callback-time-row">
+                    <input type="time" id="callbackTime"
+                           value="09:00" required>
+
+                    <select id="callbackDay">
+                        <option value="today">Сьогодні</option>
+                        <option value="tomorrow">Завтра</option>
+                        <option value="other">Інша дата</option>
+                    </select>
+                </div>
+
+                <input
+                    type="date"
+                    id="callbackDate"
+                    class="callback-date"
+                    hidden
+                >
+
+                <div class="callback-phone-row">
+                    <input
+                        type="tel"
+                        id="callbackPhone"
+                        placeholder="Ваш номер телефону"
+                        required
+                    >
+
+                    <button type="submit">
+                        ЧЕКАЮ НА ДЗВІНОК
+                    </button>
+                </div>
+
+                <small>Наприклад: 067 000 00 00</small>
+
+                <p class="callback-message" id="callbackMessage"></p>
+
+            </form>
+
+        </div>
+    </div>
+</div>

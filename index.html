@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ПрофМетДах — Надійний дах для вашого дому</title>
+
+    <meta name="description" content="ПрофМетДах — виробництво металочерепиці, профнастилу, фасадних рішень та добірних елементів.">
+
+    <meta name="theme-color" content="#17191e">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Іконки соцмереж -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="callback.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+
+        <div class="container header-container">
+
+            <!-- LOGO -->
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="ПрофМетДах">
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav class="navigation" id="navigation">
+
+    <a href="#advantages">Переваги</a>
+
+    <a href="#products">Каталог</a>
+
+    <a href="#how-it-works">Як це працює</a>
+
+    <a href="#production">Виробництво</a>
+
+    <a href="#faq">FAQ</a>
+
+    <a href="#contacts">Контакти</a>
+
+</nav>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Відкрити меню"
+                aria-expanded="false"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+       <!-- HERO SLIDER -->
+<section class="hero-slider" id="home">
+
+    <div class="hero-slides">
+
+        <!-- СЛАЙД 1 -->
+        <div class="hero-slide active">
+            <img src="images/products/metal-tile.jpg"
+                 alt="Металочерепиця">
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span>Якість</span>
+                <h1>МЕТАЛОЧЕРЕПИЦЯ</h1>
+                 <a href="#contacts" class="hero-order-btn">
+        ЗАМОВИТИ 
+    </a>
+            </div>
+        </div>
+
+        <!-- СЛАЙД 2 -->
+        <div class="hero-slide">
+            <img src="images/products/profnastil.jpg"
+                 alt="Профнастил">
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span>Надійність</span>
+                <h1>ПРОФНАСТИЛ</h1>
+                 <a href="#contacts" class="hero-order-btn">
+        ЗАМОВИТИ 
+    </a>
+            </div>
+        </div>
+
+        <!-- СЛАЙД 3 -->
+        <div class="hero-slide">
+            <img src="images/products/facade.jpg"
+                 alt="Фасадні рішення">
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span>Довговічність</span>
+                <h1>ФАСАДНІ РІШЕННЯ</h1>
+                 <a href="#contacts" class="hero-order-btn">
+        ЗАМОВИТИ 
+    </a>
+            </div>
+        </div>
+
+        <!-- СЛАЙД 4 -->
+        <div class="hero-slide">
+            <img src="images/products/accessories.jpg"
+                 alt="Добірні елементи">
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+                <span>Комфорт</span>
+                <h1>ДОБІРНІ ЕЛЕМЕНТИ</h1>
+                 <a href="#contacts" class="hero-order-btn">
+        ЗАМОВИТИ 
+    </a>
+            </div>
+        </div>
+
+        <!-- СЛАЙД 5 -->
+<div class="hero-slide">
+    <img src="images/products/flat-sheet.jpg"
+         alt="Плоский лист">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-content">
+        <span>Міцність</span>
+        <h1>ПЛОСКИЙ ЛИСТ</h1>
+        <a href="#contacts" class="hero-order-btn">
+            ЗАМОВИТИ
+        </a>
+    </div>
+</div>
+
+<!-- СЛАЙД 6 -->
+<div class="hero-slide">
+    <img src="images/products/screws.jpg"
+         alt="Саморізи">
+    <div class="hero-slide-overlay"></div>
+    <div class="hero-slide-content">
+        <span>НАДІЙНЕ КРІПЛЕННЯ</span>
+        <h1>САМОРІЗИ</h1>
+        <a href="#contacts" class="hero-order-btn">
+            ЗАМОВИТИ
+        </a>
+    </div>
+</div>
+
+    </div>
+    
+
+    <!-- СТРІЛКИ -->
+    <button class="hero-arrow hero-prev" type="button"
+            aria-label="Попередній слайд">‹</button>
+
+    <button class="hero-arrow hero-next" type="button"
+            aria-label="Наступний слайд">›</button>
+
+    <!-- НОМЕР СЛАЙДА -->
+    <div class="hero-counter">
+        <span id="currentSlide">01</span>
+        <span class="hero-counter-line"></span>
+        <span>06</span>
+    </div>
+
+</section>
+
+
+        <!-- PRODUCTS SECTION -->
+        <section class="products" id="products">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        НАША ПРОДУКЦІЯ
+                    </span>
+
+                    <h2>
+                        Покрівельні рішення<br>
+                        для будь-яких проєктів
+                    </h2>
+
+                    <p>
+                        Виробляємо якісну металопродукцію
+                        для приватного та комерційного будівництва.
+                    </p>
+
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <img src="images/products/metal-tile.jpg"
+                                 alt="Металочерепиця"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <span>01 / ПОКРІВЛЯ</span>
+                            <h3>Металочерепиця</h3>
+                            <a href="#contacts">
+                                Дізнатися більше →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <img src="images/products/profnastil.jpg"
+                                 alt="Профнастил"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <span>02 / МЕТАЛОПРОФІЛЬ</span>
+                            <h3>Профнастил</h3>
+                            <a href="#contacts">
+                                Дізнатися більше →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <img src="images/products/facade.jpg"
+                                 alt="Фасадні рішення"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <span>03 / ФАСАД</span>
+                            <h3>Фасадні рішення</h3>
+                            <a href="#contacts">
+                                Дізнатися більше →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <img src="images/products/accessories.jpg"
+                                 alt="Добірні елементи"
+                                 loading="lazy">
+                        </div>
+
+                        <div class="product-info">
+                            <span>04 / КОМПЛЕКТАЦІЯ</span>
+                            <h3>Добірні елементи</h3>
+                            <a href="#contacts">
+                                Дізнатися більше →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+    
+
+<!-- ADVANTAGES SECTION -->
+<section class="advantages-section">
+    <div class="container advantages-container">
+
+        <div class="advantages-grid">
+
+            <div class="advantage-item">
+                <div class="advantage-top">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>ПЕРЕВІРЕНА<br>СИРОВИНА</h3>
+                </div>
+                <p>Лише якісна сталь від надійних світових та вітчизняних виробників.</p>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-top">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3>ШИРОКИЙ<br>АСОРТИМЕНТ</h3>
+                </div>
+                <p>Профілі, покриття, огорожі та палітра кольорів під будь-який архітектурний стиль.</p>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-top">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>ШВИДКО І НАДІЙНО</h3>
+                </div>
+                <p>Виготовлення замовлень у найкоротші терміни з гарантією довговічності даху.</p>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-top">
+                    <div class="advantage-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3>ВИРОБНИК, А НЕ<br>ПОСЕРЕДНИК</h3>
+                </div>
+                <p>Власне виробництво покрівельних і стінових матеріалів в Івано-Франківську.</p>
+            </div>
+
+        </div>
+
+        <div class="advantages-note">
+            <strong>Наша сталь:</strong> ArcelorMittal, U.S. Steel Košice,
+            а також інші провідні європейські виробники.
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <div class="container">
+
+    <div class="about-content">
+
+        <h2 class="about-label">ПРО КОМПАНІЮ</h2>
+
+        <h2>
+            Створюємо надійні рішення
+            для вашого будівництва
+        </h2>
+
+        <p>
+            ПрофМетДах — виробник покрівельних
+            матеріалів та металопродукції.
+        </p>
+
+        <p>
+            Бренд стартував у січні 2026 року, але за ним завод
+            із багаторічним досвідом: той самий колектив,
+            обладнання й стандарти роботи.
+        </p>
+
+    </div>
+
+    <div class="about-image">
+        <img src="images/about.jpg" alt="Виробництво ПрофМетДах">
+    </div>
+
+</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUCTION SECTION -->
+<section class="production" id="production">
+
+    <video class="production-bg" autoplay muted loop playsinline>
+        <source src="videos/production.mp4" type="video/mp4">
+    </video>
+
+    <div class="production-overlay"></div>
+
+    <div class="container production-content">
+
+        <span class="section-label">
+            ПРОФМЕТДАХ
+        </span>
+
+        <h2>
+            СУЧАСНЕ ВИРОБНИЦТВО
+            <br>
+            ПОКРІВЕЛЬНИХ МАТЕРІАЛІВ
+        </h2>
+
+        <div class="production-line"></div>
+
+        <p>
+            Виготовляємо металочерепицю, профнастил,
+            фасадні рішення та комплектуючі.
+            Поєднуємо сучасні технології,
+            якість матеріалів та увагу до деталей.
+        </p>
+
+        <a href="#contacts" class="hero-order-btn">
+            ЗАМОВИТИ
+        </a>
+
+    </div>
+
+</section>
+
+
+        <!-- CONTACT SECTION -->
+        <section class="contacts" id="contacts">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        МАЄТЕ ЗАПИТАННЯ?
+                    </span>
+
+                    <h2>
+                        Допоможемо підібрати<br>
+                        оптимальне рішення
+                    </h2>
+
+                    <p>
+                        Зв'яжіться з нами для консультації
+                        та розрахунку вартості.
+                    </p>
+
+                </div>
+
+                <a href="tel:+380000000000" class="btn btn-primary">
+                    Зателефонувати нам →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-column">
+            <h3>ПРО НАС</h3>
+            <p>ПрофМетДах — надійні рішення для вашого даху та фасаду.</p>
+            <a href="#about">Дізнатися більше</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>КОНТАКТИ</h3>
+            <p>📍 Україна, м. Івано-Франківськ</p>
+            <p>📞 +38 (000) 000-00-00</p>
+            <p>✉️ info@profmetdah.ua</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>ГРАФІК РОБОТИ</h3>
+            <p>Понеділок – П'ятниця</p>
+            <p>09:00 – 18:00</p>
+            <p>Субота – Неділя: вихідні</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>МИ В СОЦМЕРЕЖАХ</h3>
+           <div class="footer-socials">
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+    <div class="footer-bottom-left">
+        <a href="#home">
+            <img src="images/logo.png" alt="ПрофМетДах">
+        </a>
+
+        <p>© 2026. Усі права захищені.</p>
+    </div>
+
+    <a href="#home">На початок ↑</a>
+
+</div>
+</footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    
+<!-- КНОПКА ЗВОРОТНОГО ДЗВІНКА -->
+<button class="floating-call" id="floatingCall"
+        aria-label="Замовити дзвінок">
+    <i class="fa-solid fa-phone"></i>
+</button>
+
+<!-- CALLBACK SCRIPT -->
+<script src="callback.js"></script>
+</body>
+</html>
