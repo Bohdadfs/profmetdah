@@ -1,0 +1,297 @@
+
+.catalog-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        grid-template-rows .55s ease,
+        opacity .35s ease,
+        visibility .55s ease;
+}
+
+.catalog-panel.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalog-panel-inner {
+    min-height: 0;
+    overflow: hidden;
+    background: #fff;
+    color: #17191e;
+    border-top: 1px solid #e8e8e8;
+}
+
+.catalog-panel-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 30px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.catalog-label {
+    display: block;
+    color: #d71920;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.catalog-panel-header h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    margin: 0 0 10px;
+}
+
+.catalog-panel-header p {
+    color: #777;
+    font-size: 16px;
+    margin: 0;
+}
+
+.catalog-close {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: #fff;
+    color: #17191e;
+    font-size: 28px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.catalog-close:hover {
+    background: #d71920;
+    border-color: #d71920;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* КАРТКИ ПРОФІЛІВ */
+
+.catalog-types {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.catalog-type {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.catalog-type:hover {
+    transform: translateY(-5px);
+    border-color: #d71920;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+/* ЗОБРАЖЕННЯ ТА ЗМІНА КОЛЬОРУ */
+
+.catalog-type-image {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    --metal-color: #681b27;
+}
+
+.catalog-type-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: filter .35s ease;
+}
+
+/* Кольорове тонування зображення */
+
+.catalog-type-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--metal-color);
+    mix-blend-mode: color;
+    pointer-events: none;
+    transition: background .35s ease;
+}
+
+.catalog-category {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #edf0f4;
+    color: #414b57;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.catalog-category.roof {
+    background: #f9e9e9;
+    color: #b51d25;
+}
+
+.catalog-type h3 {
+    font-size: 27px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.catalog-type > p {
+    min-height: 65px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0 0 18px;
+}
+
+.catalog-spec {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.catalog-spec span {
+    color: #777;
+}
+
+.catalog-spec strong {
+    color: #17191e;
+}
+
+/* ПАЛІТРА КОЛЬОРІВ */
+
+.catalog-colors {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.catalog-colors-heading h3 {
+    font-size: 19px;
+    margin: 0 0 6px;
+}
+
+.catalog-colors-heading p {
+    color: #888;
+    font-size: 12px;
+    margin: 0;
+}
+
+.catalog-color-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.catalog-color {
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--swatch);
+    box-shadow: 0 0 0 1px #ccc;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.catalog-color:hover {
+    transform: scale(1.12);
+}
+
+.catalog-color.active {
+    box-shadow: 0 0 0 2px #d71920;
+    transform: scale(1.1);
+}
+
+.catalog-selected-color {
+    min-width: 145px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selected-color-preview {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    background: #681b27;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.catalog-selected-color strong {
+    font-size: 16px;
+}
+
+.catalog-selected-color p {
+    margin: 3px 0 0;
+    color: #777;
+    font-size: 13px;
+}
+
+/* МОБІЛЬНА ВЕРСІЯ */
+
+@media (max-width: 850px) {
+    .catalog-types {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog-colors {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-panel-header {
+        padding: 35px 20px 25px;
+    }
+
+    .catalog-types {
+        grid-template-columns: 1fr;
+        padding: 0 20px 30px;
+    }
+
+    .catalog-type-image {
+        height: 190px;
+    }
+
+    .catalog-colors {
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .catalog-color-options {
+        gap: 12px;
+    }
+
+    .catalog-color {
+        width: 37px;
+        height: 37px;
+    }
+}

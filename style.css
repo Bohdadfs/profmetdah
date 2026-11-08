@@ -107,13 +107,14 @@ section {
     background: rgba(12, 15, 21, 0.12);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: border-color .3s ease, box-shadow .3s ease;
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .header-container {
-    min-height: 95px;
+    min-height: 75px;
 
     display: flex;
     align-items: center;
@@ -1734,4 +1735,34 @@ button:focus-visible {
 .products .section-heading p {
     font-size: 18px;
     line-height: 1.7;
+}
+
+/* СТАТИЧНЕ СВІТІННЯ ЛОГОТИПА */
+
+.header .logo img {
+    filter:
+        drop-shadow(0 0 2px rgba(255, 255, 255, .8))
+        drop-shadow(0 0 6px rgba(215, 25, 32, .65))
+        drop-shadow(0 0 9px rgba(215, 25, 32, .35));
+
+    transition: filter .3s ease;
+}
+
+/* Трохи яскравіше при наведенні */
+
+.header .logo:hover img {
+    filter:
+        drop-shadow(0 0 3px rgba(255, 255, 255, 1))
+        drop-shadow(0 0 9px rgba(215, 25, 32, .85))
+        drop-shadow(0 0 16px rgba(215, 25, 32, .5));
+}
+/* ПІДСВІЧУВАННЯ ШАПКИ ПРИ НАВЕДЕННІ НА ЛОГОТИП */
+
+.header {
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.header:has(.logo:hover) {
+    border-bottom-color: #d71920;
+    box-shadow: 0 1px 10px rgba(215, 25, 32, .4);
 }
