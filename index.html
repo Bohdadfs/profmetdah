@@ -38,9 +38,22 @@
         <div class="container header-container">
 
             <!-- LOGO -->
-            <a href="#home" class="logo">
-                <img src="images/logo.png" alt="ПрофМетДах">
-            </a>
+<a href="#home" class="logo">
+    <div class="logo-animation">
+        <img class="logo-base"
+             src="images/logo-animation/logo-base.png"
+             alt="ПрофМетДах">
+
+        <img class="roof-piece roof-dark"
+             src="images/logo-animation/roof-dark.png" alt="">
+
+        <img class="roof-piece roof-gray"
+             src="images/logo-animation/roof-gray.png" alt="">
+
+        <img class="roof-piece roof-red"
+             src="images/logo-animation/roof-red.png" alt="">
+    </div>
+</a>
 
             <!-- NAVIGATION -->
             <nav class="navigation" id="navigation">
@@ -579,12 +592,12 @@
     <div class="footer-bottom">
 
     <div class="footer-bottom-left">
-        <a href="#home">
-            <img src="images/logo.png" alt="ПрофМетДах">
-        </a>
+    <a href="#home" class="footer-logo">
+        <img src="images/footer-logo.png" alt="ПрофМетДах">
+    </a>
 
-        <p>© 2026. Усі права захищені.</p>
-    </div>
+    <p>© 2026. Усі права захищені.</p>
+</div>
 
     <a href="#home">На початок ↑</a>
 
@@ -594,6 +607,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+    <script src="logo-animation.js"></script>
     
 <!-- КНОПКА ЗВОРОТНОГО ДЗВІНКА -->
 <button class="floating-call" id="floatingCall"

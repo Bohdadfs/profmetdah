@@ -130,7 +130,7 @@ section {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    transform: translateX(-65px);
+    transform: translateX(-35px);
 }
 
 .logo img {
@@ -1763,4 +1763,211 @@ button:focus-visible {
 .header:has(.logo:hover) {
     border-bottom-color: #d71920;
     box-shadow: 0 1px 10px rgba(215, 25, 32, .4);
+}
+
+/* LOGO ROOF ASSEMBLY ANIMATION */
+
+.logo-animation {
+    position: relative;
+    width: 230px;
+    aspect-ratio: 2048 / 453;
+    flex-shrink: 0;
+}
+
+.logo-animation img {
+    position: absolute;
+    display: block;
+    max-width: none;
+    height: auto;
+    filter: none;
+}
+
+.logo-animation .logo-base {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-animation .roof-piece {
+    opacity: 0;
+    animation: roofAssemble .9s cubic-bezier(.2,.75,.3,1) forwards;
+}
+
+.logo-animation .roof-dark {
+    left: 2.49%;
+    top: 10.15%;
+    width: 25.59%;
+    animation-delay: .15s;
+    --start-x: -35px;
+    --start-y: -20px;
+}
+
+.logo-animation .roof-gray {
+    left: 8.45%;
+    top: 24.28%;
+    width: 16.5%;
+    animation-delay: .45s;
+    --start-x: -25px;
+    --start-y: 15px;
+}
+
+.logo-animation .roof-red {
+    left: 13.33%;
+    top: 26.71%;
+    width: 31.05%;
+    animation-delay: .7s;
+    --start-x: 35px;
+    --start-y: -20px;
+}
+
+@keyframes roofAssemble {
+    0% {
+        opacity: 0;
+        transform: translate(var(--start-x), var(--start-y));
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* FOOTER LOGO — INDEPENDENT FROM HEADER ANIMATION */
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100px;
+    height: auto;
+    filter: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+/* LOGO PROFILE PRESENTATION */
+
+/* Контейнер логотипа */
+.logo-animation {
+    position: relative;
+    width: 230px;
+    aspect-ratio: 2048 / 453;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Плавне зникнення зображень логотипа */
+.logo-animation > img {
+    transition: opacity 0.35s ease;
+}
+
+/* Ховаємо логотип під час анімації */
+.logo-animation.show-profiles > img {
+    opacity: 0 !important;
+}
+
+/* Контейнер для профілів */
+.logo-profile-presentation {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+/* Показ профілів */
+.logo-animation.show-profiles .logo-profile-presentation {
+    opacity: 1;
+}
+
+/* Розмір ліній */
+.logo-profile-presentation svg {
+    display: block;
+    width: 170px;
+    height: 45px;
+    overflow: visible;
+}
+
+/* Стиль ліній профнастилу */
+/* LOGO PROFILE PRESENTATION */
+
+.logo-animation {
+    position: relative;
+    width: 230px;
+    aspect-ratio: 2048 / 453;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.logo-profile-presentation {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+justify-content: center;
+padding-left: 20px;
+padding-top: 20px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease;
+}
+
+.logo-profile-presentation.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logo-profile-presentation svg {
+    display: block;
+    width: 115px;
+    height: 32px;
+    overflow: visible;
+}
+
+.profile-line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,.6));
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+@keyframes drawProfile {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.profile-name {
+    display: none;
 }
