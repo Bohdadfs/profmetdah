@@ -28,9 +28,45 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="callback.css">
+    <link rel="stylesheet" href="loader/loader.css">
 </head>
 
 <body>
+    <!-- LOADER -->
+<div id="site-loader" class="site-loader">
+    <video class="loader-video" autoplay muted playsinline>
+        <source src="videos/loader-background.mp4" type="video/mp4">
+    </video>
+    <div class="loader-content">
+        <div class="loader-logo-animation">
+
+            <img
+                class="loader-logo-base"
+                src="images/logo-animation/logo-base.png"
+                alt=""
+            >
+
+            <img
+                class="loader-roof-piece loader-roof-dark"
+                src="images/logo-animation/roof-dark.png"
+                alt=""
+            >
+
+            <img
+                class="loader-roof-piece loader-roof-gray"
+                src="images/logo-animation/roof-gray.png"
+                alt=""
+            >
+
+            <img
+                class="loader-roof-piece loader-roof-red"
+                src="images/logo-animation/roof-red.png"
+                alt=""
+            >
+
+        </div>
+    </div>
+</div>
 
     <!-- HEADER -->
     <header class="header" id="header">
@@ -620,5 +656,7 @@
 <!-- CATALOG SCRIPT -->
 <script src="catalog/catalog.js"></script>
 <script src="faq.js"></script>
+<!-- LOADER SCRIPT -->
+<script src="loader/loader.js"></script>
 </body>
 </html>
