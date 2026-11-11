@@ -1407,12 +1407,18 @@ button:focus-visible {
 }
 
 .footer-socials a {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 44px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
+    box-sizing: border-box;
     color: #aaa;
     background: #24262b;
     border: 1px solid #444;
@@ -1972,4 +1978,203 @@ padding-top: 20px;
 
 .profile-name {
     display: none;
+}
+
+/* ========================================
+   FOOTER — 5 КОЛОНОК З КАРТОЮ
+======================================== */
+
+
+
+/* ========================================
+   FOOTER — ВИРІВНЮВАННЯ 5 КОЛОНОК
+======================================== */
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 190px 245px 175px 195px 245px;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 45px 20px 40px;
+}
+
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 12px;
+}
+
+.footer-column p,
+.footer-column > a {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-column > a:hover {
+    color: #d71920;
+}
+
+/* ========================================
+   GOOGLE MAPS
+======================================== */
+
+.footer-map-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: 3px;
+    left: -25px;
+}
+
+.footer-map-column h3 {
+    text-align: left;
+}
+
+.footer-map-link {
+    text-align: left;
+}
+
+.footer-map {
+    width: 170px;
+    padding: 4px;
+    background: #24262b;
+    border: 1px solid #444;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 65px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.footer-map-link {
+    display: inline-block;
+    margin-top: 7px;
+    color: #aaa !important;
+    font-size: 11px !important;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.footer-map-link:hover {
+    color: #d71920 !important;
+}
+
+/* ========================================
+   SOCIAL MEDIA
+======================================== */
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 50%;
+
+    background: #24262b;
+    color: #aaa;
+    font-size: 17px;
+
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.footer-socials a:hover {
+    color: #fff;
+    background: #d71920;
+    border-color: #d71920;
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1250px) {
+    .footer-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .footer-socials {
+        flex-wrap: wrap;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 25px;
+    }
+
+    .footer-map {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .footer-map iframe {
+        height: 150px;
+    }
+
+    .footer-socials {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ОДНАКОВЕ ВИРІВНЮВАННЯ ЗАГОЛОВКІВ ФУТЕРА */
+
+.footer-column h3 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.footer-container {
+    align-items: start;
 }
