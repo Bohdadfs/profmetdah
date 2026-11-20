@@ -1,0 +1,204 @@
+
+/* ОСНОВНА СТРУКТУРА */
+
+.geometry-layout {
+    display: flex;
+    min-height: 80vh;
+    width: 100%;
+    margin-top: 75px;
+}
+
+/* БОКОВА ПАНЕЛЬ */
+
+.geometry-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    padding: 25px 12px 25px 0;
+    border-right: 1px solid #e5e5e5;
+    background: #fafafa;
+}
+
+.geometry-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ВКЛАДКИ */
+
+.geometry-sidebar-nav a {
+    display: block;
+    position: relative;
+    padding: 13px 16px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+/* НАВЕДЕННЯ */
+
+.geometry-sidebar-nav a:hover {
+    background: #eeeeee;
+    color: #e31b23;
+}
+
+/* АКТИВНА ВКЛАДКА */
+
+.geometry-sidebar-nav a.active {
+    background: #222222;
+    color: #ffffff;
+    text-decoration: none;
+    border-left: 3px solid #e31b23;
+    padding-left: 13px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ПРАВА ЧАСТИНА */
+
+.geometry-content {
+    flex: 1;
+    max-width: 1200px;
+    padding: 25px 35px;
+}
+
+/* ХЛІБНІ КРИХТИ */
+
+.geometry-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 13px;
+}
+
+.geometry-breadcrumbs a {
+    color: #333;
+    text-decoration: none;
+}
+
+.geometry-breadcrumbs a:hover {
+    color: #e31b23;
+}
+
+/* ЗАГОЛОВОК */
+
+.geometry-content {
+    flex: 1;
+    max-width: 1200px;
+    padding: 45px 35px;
+}
+/* ДОКУМЕНТИ */
+
+.geometry-documents h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.geometry-documents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.geometry-documents li {
+    margin-bottom: 12px;
+}
+
+.geometry-documents li::before {
+    content: "—";
+    margin-right: 12px;
+}
+
+.geometry-documents a {
+    color: #c93636;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.geometry-documents a:hover {
+    color: #e31b23;
+}
+
+/* АДАПТАЦІЯ */
+
+@media (max-width: 768px) {
+
+    .geometry-layout {
+        flex-direction: column;
+    }
+
+    .geometry-sidebar {
+        width: 100%;
+        padding: 10px 15px;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .geometry-content {
+        padding: 20px 15px;
+    }
+
+    .geometry-content h1 {
+        font-size: 28px;
+    }
+}
+
+/* ФУТЕР — СТОРІНКА ГЕОМЕТРІЇ */
+.site-footer {
+    background: #17191e;
+    border-top: 1px solid #303136;
+    margin-top: 40px;
+}
+
+.site-footer .footer-bottom {
+    min-height: 100px;
+    padding: 18px 60px;
+}
+
+.site-footer .footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transform: none;
+}
+
+.site-footer .footer-bottom-left img {
+    width: 120px;
+}
+
+.site-footer .footer-bottom-left p {
+    font-size: 13px;
+    color: #888;
+}
+
+.site-footer .footer-bottom-left img {
+    width: 160px !important;
+    height: auto;
+}
+
+/* ФУТЕР СТОРІНКИ ГЕОМЕТРІЇ */
+.geometry-footer {
+    background: #17191e;
+    border-top: 1px solid #303136;
+    margin-top: 40px;
+}
+
+.geometry-footer .footer-bottom {
+    padding: 18px 60px;
+}
+
+.geometry-footer .footer-bottom-left {
+    transform: none;
+}
+
+.geometry-footer .footer-bottom-left img {
+    width: 95px;
+    height: auto;
+}
+
+.geometry-footer .footer-bottom-left p {
+    color: #888;
+    font-size: 13px;
+}

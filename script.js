@@ -42,10 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(currentIndex - 1);
     }
 
-    function startSlider() {
-        clearInterval(sliderTimer);
-        sliderTimer = setInterval(nextSlide, 5000);
-    }
+   function startSlider() {
+    clearInterval(sliderTimer);
+
+    const delay = currentIndex === 0 ? 8500 : 5000;
+
+    sliderTimer = setTimeout(() => {
+        nextSlide();
+        startSlider();
+    }, delay);
+}
 
     if (nextButton) {
         nextButton.addEventListener("click", function () {

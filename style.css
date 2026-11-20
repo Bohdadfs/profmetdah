@@ -1037,7 +1037,7 @@ button:focus-visible {
     inset: 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity 1.4s ease, visibility 1.4s ease;
 }
 
 .hero-slide.active {
@@ -1075,7 +1075,7 @@ button:focus-visible {
 .hero-slide-content {
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 54%;
     left: max(30px, calc((100% - 1280px) / 2));
     transform: translateY(-50%);
     max-width: 850px;
@@ -1088,15 +1088,25 @@ button:focus-visible {
     color: #ff555a;
     font-size: 12px;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
 }
 
 .hero-slide-content h1 {
-    font-size: clamp(42px, 6vw, 82px);
-    line-height: 1.05;
+    font-size: clamp(42px, 5.2vw, 72px);
+    line-height: 1.08;
     font-weight: 800;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     text-transform: uppercase;
+}
+
+.hero-description {
+    max-width: 450px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #fff;
 }
 
 .hero-arrow {
@@ -1104,28 +1114,40 @@ button:focus-visible {
     z-index: 5;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(255,255,255,.6);
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.35);
     border-radius: 50%;
-    background: rgba(0,0,0,.2);
+
+    background: rgba(20,20,20,.25);
+    backdrop-filter: blur(5px);
+
     color: #fff;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 300;
+
     cursor: pointer;
-    transition: .3s ease;
+    transition: all .3s ease;
 }
 
 .hero-arrow:hover {
-    background: #d71920;
-    border-color: #d71920;
+    background: #e53935;
+    border-color: #e53935;
+    transform: translateY(-50%) scale(1.08);
 }
 
 .hero-prev {
-    left: 25px;
+    left: 30px;
 }
 
 .hero-next {
-    right: 25px;
+    right: 30px;
 }
 
 .hero-counter {
@@ -1135,7 +1157,7 @@ button:focus-visible {
     right: max(30px, calc((100% - 1280px) / 2));
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -1551,13 +1573,16 @@ button:focus-visible {
     color: #17191e;
 }
 .about .about-label {
-    color: #d71920;
-    font-size: clamp(32px, 4vw, 38px);
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
     font-weight: 800;
-    letter-spacing: 1px;
-    line-height: 1.15;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: #d71920;
     margin-bottom: 30px;
     text-transform: uppercase;
+    transform: scaleX(1.0) scaleY(1.0);
+    transform-origin: left center;
 }
 .about-content h2:not(.about-label) {
     margin-top: 0;
@@ -2177,4 +2202,19 @@ padding-top: 20px;
 
 .footer-container {
     align-items: start;
+}
+
+
+.hero-red-line {
+    width: 130px;
+    height: 4px;
+    background: #e31b23;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.advantage-item:nth-child(3) {
+    position: relative;
+    left: 30px;
 }
