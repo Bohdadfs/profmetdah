@@ -1,0 +1,88 @@
+
+/* =================================
+   СТОРІНКА ПРО КОМПАНІЮ
+================================= */
+
+.about-content {
+    min-height: 60vh;
+    padding: 70px 0;
+    margin-top: 75px;
+    background: #fafafa;
+}
+
+.about-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 35px;
+}
+
+.about-label {
+    display: inline-block;
+    color: #e31b23;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-content h1 {
+    font-size: 38px;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    max-width: 750px;
+    width: 100%;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    text-align-last: justify;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   ВИПАДАЮЧЕ МЕНЮ
+================================= */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Показувати підменю тільки при наведенні */
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+
+/* =================================
+   МОБІЛЬНА ВЕРСІЯ
+================================= */
+
+@media (max-width: 768px) {
+
+    .about-content {
+        padding: 45px 0;
+    }
+
+    .about-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content .container {
+        padding: 0 20px;
+    }
+
+}
